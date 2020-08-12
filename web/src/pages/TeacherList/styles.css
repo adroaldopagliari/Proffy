@@ -6,6 +6,7 @@
 #search-teachers {
   margin-top: 3.2rem;
 }
+
 #search-teachers label {
   color: var(--color-text-in-primary);
 }
@@ -19,6 +20,7 @@
   #page-teacher-list {
     max-width: 100%;
   }
+
   #search-teachers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -26,12 +28,15 @@
     position: absolute;
     bottom: -28px;
   }
+
   #search-teachers .input-block + .input-block {
     margin-top: 0;
   }
+
   #search-teachers .select-block + .select-block {
     margin-top: 0;
   }
+  
   #page-teacher-list main {
     padding: 3.2rem 0;
     max-width: 740px;
