@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./styles.css";
 
-import PageHeader from '../../components/PageHeader';
-import TeacherItem from '../../components/TeacherItem';
+import PageHeader from "../../components/PageHeader/";
+import TeacherItem from "../../components/TeacherItem";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 
-import './styles.css';
-
-function TeacherList() {
+export default function TeacherList() {
   return (
-    <div id="page-teacher-list" className="container">
-      <PageHeader title="Estes são os proffys disponíveis.">
+    <div className="container" id="page-teacher-list">
+      <PageHeader title="Esses são os Proffys disponíveis.">
         <form id="search-teachers">
           <Select
             name="subject"
@@ -51,7 +50,5 @@ function TeacherList() {
         <TeacherItem />
       </main>
     </div>
-  )
+  );
 }
-
-export default TeacherList;
