@@ -11,7 +11,11 @@ interface PageHeaderProps {
   description?: string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
+const PageHeader: React.FC<PageHeaderProps> = ({
+  children,
+  title,
+  description,
+}) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -24,6 +28,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
       <div className="header-content">
         <strong>{title}</strong>
         {description && <p>{description}</p>}
+
+        {children}
       </div>
     </header>
   );
