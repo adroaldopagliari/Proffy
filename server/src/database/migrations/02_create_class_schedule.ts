@@ -1,6 +1,6 @@
 import Knex from 'knex';
 
-export async function up(knex: Knex) {
+export async function up(knex: Knex): Promise<void> {
   return knex.schema.createTable('class_schedule', table => {
     table.increments('id').primary();
 
@@ -8,15 +8,16 @@ export async function up(knex: Knex) {
     table.integer('from').notNullable();
     table.integer('to').notNullable();
 
-    table.integer('class_id')
+    table
+      .integer('class_id')
       .notNullable()
       .references('id')
       .inTable('classes')
       .onDelete('CASCADE')
       .onUpdate('CASCADE');
-  })
+  });
 }
 
-export async function down(knex: Knex) {
+export async function down(knex: Knex): Promise<void> {
   return knex.schema.dropTable('class_schedule');
 }
