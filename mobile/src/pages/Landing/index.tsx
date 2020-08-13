@@ -12,25 +12,25 @@ import studyIcon from '../../assets/images/icons/study.png';
 import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
-function Landing() {
+const Landing: React.FC = () => {
   const { navigate } = useNavigation();
   const [totalConnections, setTotalConnections] = useState(0);
 
   useEffect(() => {
-    api.get('connections').then(response => {
-      const { total } = response.data; 
+    api.get('connections').then((response) => {
+      const { total } = response.data;
 
       setTotalConnections(total);
-    })
+    });
   }, []);
 
-  function handleNavigateToGiveClassesPage() {
+  const handleNavigateToGiveClassesPage = (): void => {
     navigate('GiveClasses');
-  }
+  };
 
-  function handleNavigateToStudyPages() {
+  const handleNavigateToStudyPages = (): void => {
     navigate('Study');
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -42,7 +42,7 @@ function Landing() {
       </Text>
 
       <View style={styles.buttonsContainer}>
-        <RectButton 
+        <RectButton
           onPress={handleNavigateToStudyPages}
           style={[styles.button, styles.buttonPrimary]}
         >
@@ -51,8 +51,8 @@ function Landing() {
           <Text style={styles.buttonText}>Estudar</Text>
         </RectButton>
 
-        <RectButton 
-          onPress={handleNavigateToGiveClassesPage} 
+        <RectButton
+          onPress={handleNavigateToGiveClassesPage}
           style={[styles.button, styles.buttonSecondary]}
         >
           <Image source={giveClassesIcon} />
@@ -62,11 +62,11 @@ function Landing() {
       </View>
 
       <Text style={styles.totalConnections}>
-        Total de {totalConnections} conexões já realizadas {' '}
+        Total de {totalConnections} conexões já realizadas{' '}
         <Image source={heartIcon} />
       </Text>
     </View>
   );
-}
+};
 
 export default Landing;

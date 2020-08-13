@@ -5,15 +5,11 @@ import Landing from './src/pages/Landing';
 
 export default function App() {
   return (
-   <Landing />
+    <>
+      <Landing />
+      <StatusBar style="auto" />
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+

@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#8257E5',
     justifyContent: 'center',
-    padding: 40
+    padding: 40,
   },
 
   banner: {
     width: '100%',
-    resizeMode: 'contain'
+    resizeMode: 'contain',
   },
 
   title: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
 
   titleBold: {
-    fontFamily: 'Poppins_600SemiBold'
+    fontFamily: 'Poppins_600SemiBold',
   },
 
   buttonsContainer: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#333',
     borderRadius: 8,
     padding: 24,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 
   buttonPrimary: {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
 
   buttonSecondary: {
-    backgroundColor: '#04d361'
+    backgroundColor: '#04d361',
   },
 
   buttonText: {
